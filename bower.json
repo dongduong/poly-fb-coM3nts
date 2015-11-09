@@ -1,0 +1,21 @@
+{
+  "name": "poly-fb-coM3nts",
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "authors": [
+    "Dong Duong"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0"
+  }
+}

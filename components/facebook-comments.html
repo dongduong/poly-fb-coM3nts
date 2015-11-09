@@ -23,29 +23,32 @@ Create: 09/11/2015
   </style>
 
   <template id="FacebookComments">
-    <div id="fbcommentshtml5">
-			<!-- HTML5 -->
+    XXX
+    <div id="fb-root"></div>
+    <div class="fb-comments" data-href="http://127.0.0.1:51792/poly-fb-coM3nts/index.html" data-width="550" data-numposts="5"></div>
+		</div>
+		
+		<!--<div id="fbcommentshtml5">
 			<div
 				class="fb-comments"
-				data-colorscheme="{{ colorscheme }}"
-				data-href="{{ pageurl }}"
-				data-mobile="{{ mobile }}"
-				data-num-posts="{{ numposts }}"
-				data-order-by="{{ orderby }}"
-				data-width="{{ width }}"
+				data-colorscheme="{{colorscheme}}"
+				data-href="{{pageurl}}"
+				data-mobile="{{mobile}}"
+				data-num-posts="{{numposts}}"
+				data-order-by="{{orderby}}"
+				data-width="{{width}}"
 			></div>
 		</div>
 		<div id="fbcommentsxfbml">
-			<!-- XFBML -->
 			<fb:comments
-				colorscheme="{{ colorscheme }}"
-				href="{{ pageurl }}"
-				mobile="{{ mobile }}"
-				numposts="{{ numposts }}"
-				orderby="{{ orderby }}"
-				width="{{ width }}"
+				colorscheme="{{colorscheme}}"
+				href="{{pageurl}}"
+				mobile="{{mobile}}"
+				numposts="{{numposts}}"
+				orderby="{{orderby}}"
+				width="{{width}}"
 			></fb:comments>
-		</div>
+		</div>-->
   </template>
   
   <script>
@@ -140,12 +143,13 @@ Create: 09/11/2015
     
     renderFacebookComments: function() {
 			(function(d, s, id) {
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) return;
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/en_US/sdk.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5&appId=631039860314768";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+			
 			switch (this.type) {
 				case 'xfbml':
 					console.log('xfbml');
